@@ -1,6 +1,6 @@
-# Título del Proyecto
+# API - SIMPSONS
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Es una página que contiene los personajes de los simpson con algunas frases celebres.
 
 ## Comenzando 🚀
 
@@ -11,7 +11,8 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_React
+_Node js
 
 ```
 Da un ejemplo
@@ -97,8 +98,7 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 * Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
+
 
 
 
