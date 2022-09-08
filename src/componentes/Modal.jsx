@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 
 function PersonModal({personaje}) {
   const [show, setShow] = useState(false);
-
+  //Funciones que manejan la apertura y cierre del modal
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 

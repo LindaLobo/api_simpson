@@ -6,8 +6,11 @@ import Modal from "./componentes/Modal";
 const App = () => {
   const [personajes, setPersonajes] = useState([]);
   const [busqueda, setBusqueda] = useState("");
+  const [loading, setLoading] = useState(false);
 
+  //Funcion que carga todos mis personajes
   async function getPersonajes() {
+    setLoading(true);
     try {
       const response = await axios.get(
         "https://thesimpsonsquoteapi.glitch.me/quotes?count=10"
@@ -15,9 +18,11 @@ const App = () => {
       setPersonajes(response.data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   }
-
+ //Funcion que escucha el buscador
   const handleChangeSearch = (e) => {
     setBusqueda(e.target.value);
     if (e.target.value === "") {
@@ -25,6 +30,7 @@ const App = () => {
     }
   };
 
+  //Funcion para el boton de busqueda
   const handleChange = async (e) => {
     e.preventDefault();
     try {
@@ -46,7 +52,7 @@ const App = () => {
       <div>
         <nav className="navbar">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <img
                 src="../assets/img/dona.PNG "
                 alt=""
@@ -69,7 +75,7 @@ const App = () => {
           </div>
         </nav>
       </div>
-
+    {/* Buscador */}
       <div>
         <form className="d-flex">
           <div className="containerInput">
@@ -88,10 +94,20 @@ const App = () => {
       </div>
 
       <div className="row container-fluid d-flex justify-content-center">
-        {personajes.length > 0 ? (
+        {loading ? (
+          <div className="spinner-container" >
+            <div className="spinner-border" style={{width: "5rem", height: "5rem" }} role="status">
+              <span class="visually-hidden"> </span>
+            </div>
+          </div>
+        ) : personajes.length > 0 ? (
           personajes.map((personaje, index) => (
             <div key={index} className="card m-2" style={{ width: "15rem" }}>
-              <img src={personaje.image} className="card-img-top" alt={personaje.character} />
+              <img
+                src={personaje.image}
+                className="card-img-top"
+                alt={personaje.character}
+              />
               <div className="card-body">
                 <h5 className="card-title">{personaje.character}</h5>
                 <p className="card-text"> {personaje.quote} </p>
