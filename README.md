@@ -26,6 +26,10 @@ _Deploy realizado en Netlify link [aquí](https://endearing-kataifi-a51c1b.netli
 * [Bootstrap](https://getbootstrap.com/)
 * [Axios](https://axios-http.com/docs/intro)
 
+## Enlace del Video ⏯️
+
+* [Youtube](https://www.youtube.com/watch?v=ValvtLW6HNo
+
 ## Autores ✒️❤️
 
 * **Linda Aguilar** - *Desarrolladora* - [Linkedin](https://www.linkedin.com/in/linda-aguilar-34b502118/)
